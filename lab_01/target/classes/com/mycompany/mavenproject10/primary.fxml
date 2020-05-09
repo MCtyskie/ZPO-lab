@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject10.PrimaryController">
+   <children>
+      <Button fx:id="createDir" layoutX="470.0" layoutY="551.0" mnemonicParsing="false" onAction="#createDir" prefHeight="25.0" prefWidth="115.0" text="utwórz folder" />
+      <TextField fx:id="dirName2" layoutX="309.0" layoutY="548.0" prefHeight="31.0" prefWidth="159.0" promptText="nazwa folderu" />
+      <Button fx:id="deleteDir" layoutX="309.0" layoutY="497.0" mnemonicParsing="false" onAction="#deleteDir" prefHeight="25.0" prefWidth="115.0" text="usuń folder/plik" />
+      <TextField fx:id="dirName3" layoutX="338.0" layoutY="150.0" prefHeight="31.0" prefWidth="418.0" promptText="nazwa folderu/pliku" />
+      <Button fx:id="refresh" layoutX="309.0" layoutY="714.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="115.0" text="odśwież" />
+      <TableView fx:id="dirFiles" layoutX="38.0" layoutY="413.0" onDragDetected="#handleDragDetection" onMouseClicked="#mouseClicked" prefHeight="326.0" prefWidth="261.0">
+        <columns>
+          <TableColumn fx:id="dirFilesTable" prefWidth="260.0" text="paths" />
+        </columns>
+      </TableView>
+      <TextField fx:id="pathField4" layoutX="83.0" layoutY="251.0" prefHeight="31.0" prefWidth="362.0" promptText="ścieżka docelowa" />
+      <Button fx:id="copyFile" layoutX="456.0" layoutY="254.0" mnemonicParsing="false" onAction="#copyFile" prefHeight="25.0" prefWidth="115.0" text="kopiuj plik tutaj" />
+      <TextField fx:id="pathField5" layoutX="83.0" layoutY="296.0" prefHeight="31.0" prefWidth="362.0" promptText="ścieżka docelowa" />
+      <Button fx:id="moveFile" layoutX="456.0" layoutY="299.0" mnemonicParsing="false" onAction="#moveFile" prefHeight="25.0" prefWidth="115.0" text="przenieś plik tutaj" />
+      <Button fx:id="prevDir" layoutX="309.0" layoutY="446.0" mnemonicParsing="false" onAction="#prevDir" prefHeight="25.0" prefWidth="115.0" text="poprzedni folder" />
+      <Label layoutX="42.0" layoutY="382.0" prefHeight="25.0" prefWidth="82.0" text="Obecny folder:" />
+      <Label layoutX="32.0" layoutY="150.0" prefHeight="31.0" prefWidth="300.0" text="Folder lub plik do usunięcia/skopiowania/przeniesienia:" />
+      <Label fx:id="pathFieldLabel" layoutX="127.0" layoutY="382.0" prefHeight="25.0" prefWidth="344.0" />
+      <Label layoutX="32.0" layoutY="30.0" prefHeight="25.0" prefWidth="208.0" text="Ilość miejsca dostępnego na dyskach:" />
+      <Label fx:id="freeSpaceC" layoutX="32.0" layoutY="55.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="freeSpaceD" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="149.0" />
+      <TableView fx:id="dirFiles2" layoutX="602.0" layoutY="410.0" onDragDropped="#handleDragDrop" onDragOver="#handleDragOver" onMouseClicked="#mouseClicked2" prefHeight="338.0" prefWidth="261.0">
+         <columns>
+            <TableColumn fx:id="dirFilesTable2" prefWidth="260.0" text="paths" />
+         </columns>
+      </TableView>
+      <Label layoutX="602.0" layoutY="382.0" prefHeight="25.0" prefWidth="82.0" text="Obecny folder:" />
+      <Label fx:id="pathFieldLabel2" layoutX="684.0" layoutY="382.0" prefHeight="25.0" prefWidth="268.0" />
+      <Button fx:id="prevDir2" layoutX="863.0" layoutY="446.0" mnemonicParsing="false" onAction="#prevDir2" prefHeight="25.0" prefWidth="106.0" text="poprzedni folder" />
+      <RadioButton fx:id="cpyRadioButton" layoutX="323.0" layoutY="595.0" mnemonicParsing="false" onAction="#cpyRadioButton" text="Kopiuj plik/ folder">
+         <toggleGroup>
+            <ToggleGroup fx:id="cpymv" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="mveRadioButton" layoutX="323.0" layoutY="622.0" mnemonicParsing="false" onAction="#mveRadioButton" text="Przenieś plik/ folder" toggleGroup="$cpymv" />
+   </children>
+</AnchorPane>
