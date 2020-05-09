@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject9.PrimaryController">
+   <children>
+      <Button fx:id="load_data" layoutX="633.0" layoutY="248.0" mnemonicParsing="false" onAction="#load_data" prefHeight="63.0" prefWidth="144.0" text="load data" />
+      <TableView fx:id="EmployeeTable" layoutX="102.0" layoutY="31.0" prefHeight="280.0" prefWidth="493.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="41.0" text="id" />
+          <TableColumn fx:id="nameColumn" prefWidth="177.0" text="name" />
+            <TableColumn fx:id="emailColumn" prefWidth="150.0" text="email" />
+            <TableColumn fx:id="salaryColumn" prefWidth="124.0" text="salary" />
+        </columns>
+      </TableView>
+      <Label layoutX="32.0" layoutY="327.0" prefHeight="23.0" prefWidth="117.0" text="Add employee:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="395.0" prefHeight="23.0" prefWidth="43.0" text="Name:" />
+      <Label layoutX="32.0" layoutY="432.0" prefHeight="23.0" prefWidth="43.0" text="Email:" />
+      <Label layoutX="32.0" layoutY="473.0" prefHeight="23.0" prefWidth="43.0" text="Salary:" />
+      <TextField fx:id="add_name" layoutX="75.0" layoutY="394.0" promptText="name" />
+      <TextField fx:id="add_email" layoutX="75.0" layoutY="431.0" promptText="email" />
+      <TextField fx:id="add_salary" layoutX="75.0" layoutY="472.0" promptText="salary" />
+      <Button fx:id="add_button" layoutX="260.0" layoutY="355.0" mnemonicParsing="false" onAction="#add_button" prefHeight="141.0" prefWidth="54.0" text="Add" />
+      <Label fx:id="add_label_error" layoutX="604.0" layoutY="64.0" prefHeight="37.0" prefWidth="241.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="359.0" prefHeight="23.0" prefWidth="43.0" text="Id:" />
+      <TextField fx:id="add_id" layoutX="75.0" layoutY="358.0" promptText="id" />
+      <Label layoutX="359.0" layoutY="327.0" prefHeight="23.0" prefWidth="195.0" text="Delete by id/ search by name:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="delete_idname" layoutX="383.0" layoutY="406.0" prefHeight="25.0" prefWidth="117.0" promptText="id/name" />
+      <Label fx:id="delete_label_error" layoutX="604.0" layoutY="101.0" prefHeight="37.0" prefWidth="241.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="delete_byid_button" layoutX="588.0" layoutY="377.0" mnemonicParsing="false" onAction="#delete_byid_button" prefHeight="37.0" prefWidth="117.0" text="Delete by id" />
+      <RadioButton fx:id="deletebyid" layoutX="359.0" layoutY="366.0" mnemonicParsing="false" onAction="#deletebyid" text="by id">
+         <toggleGroup>
+            <ToggleGroup fx:id="deletegroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="deletebyname" layoutX="464.0" layoutY="366.0" mnemonicParsing="false" onAction="#deletebyname" text="by name" toggleGroup="$deletegroup" />
+      <Button fx:id="search_byname_button" layoutX="588.0" layoutY="425.0" mnemonicParsing="false" onAction="#search_byname_button" prefHeight="37.0" prefWidth="117.0" text="Search by name" />
+      <Label fx:id="search_res" layoutX="383.0" layoutY="473.0" prefHeight="37.0" prefWidth="262.0" />
+   </children>
+</AnchorPane>
