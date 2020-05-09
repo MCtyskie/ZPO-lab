@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="806.0" prefWidth="1189.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject13.PrimaryController">
+   <children>
+      <Label layoutX="31.0" layoutY="35.0" prefHeight="28.0" prefWidth="186.0" text="Privide class name with package:" />
+      <TextField fx:id="classpackagefield" layoutX="217.0" layoutY="35.0" prefHeight="28.0" prefWidth="372.0" text="com.mycompany.mavenproject13.Student" />
+      <Button fx:id="classpackageconfirmed" layoutX="626.0" layoutY="35.0" mnemonicParsing="false" onAction="#classpackageconfirmed" prefHeight="28.0" prefWidth="71.0" text="confirm" />
+      <TableView fx:id="tableview" layoutX="31.0" layoutY="115.0" prefHeight="340.0" prefWidth="498.0">
+        <columns>
+          <TableColumn fx:id="methodesColumn" prefWidth="496.0" text="methodes" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableview2" layoutX="626.0" layoutY="115.0" prefHeight="340.0" prefWidth="498.0">
+        <columns>
+          <TableColumn fx:id="settersColumn" prefWidth="497.0" text="setters" />
+        </columns>
+      </TableView>
+      <Button fx:id="editSetter" layoutX="1016.0" layoutY="468.0" mnemonicParsing="false" onAction="#editSetter" prefHeight="39.0" prefWidth="108.0" text="edit setter" />
+      <TextField fx:id="setterNewValueField" layoutX="626.0" layoutY="468.0" prefHeight="39.0" prefWidth="252.0" promptText="new value" />
+      <Button fx:id="runMethod" layoutX="439.0" layoutY="468.0" mnemonicParsing="false" onAction="#runMethod" prefHeight="39.0" prefWidth="90.0" text="run method" />
+      <RadioButton fx:id="RBint" layoutX="626.0" layoutY="527.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="int">
+         <toggleGroup>
+            <ToggleGroup fx:id="g1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RBboolean" layoutX="626.0" layoutY="555.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="boolean" toggleGroup="$g1" />
+      <RadioButton fx:id="RBfloat" layoutX="626.0" layoutY="583.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="float" toggleGroup="$g1" />
+      <RadioButton fx:id="RBString" layoutX="626.0" layoutY="611.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="String" toggleGroup="$g1" />
+      <RadioButton fx:id="RBdate" layoutX="626.0" layoutY="667.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="date" toggleGroup="$g1" />
+      <RadioButton fx:id="RBEnum" layoutX="626.0" layoutY="639.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="Enum" toggleGroup="$g1" />
+   </children>
+</AnchorPane>
