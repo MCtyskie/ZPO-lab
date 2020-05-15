@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject14.PrimaryController">
+   <children>
+      <ComboBox fx:id="comboBox" layoutX="31.0" layoutY="63.0" onAction="#display" prefHeight="35.0" prefWidth="323.0" />
+      <Label layoutX="31.0" layoutY="31.0" text="Choose class from below:" />
+      <TableView fx:id="tableViewA" layoutX="11.0" layoutY="147.0" prefHeight="156.0" prefWidth="896.0">
+        <columns>
+          <TableColumn fx:id="column1a" prefWidth="332.0" text="object" />
+          <TableColumn fx:id="column2a" prefWidth="205.0" text="name" />
+            <TableColumn fx:id="column3a" prefWidth="195.0" text="day" />
+            <TableColumn fx:id="column4a" prefWidth="163.0" text="date" />
+        </columns>
+      </TableView>
+      <Label layoutX="527.0" layoutY="31.0" text="Provide class name with package:" />
+      <TextField fx:id="createField" layoutX="527.0" layoutY="63.0" prefHeight="35.0" prefWidth="303.0" text="com.mycompany.mavenproject14.AClass" />
+      <Button fx:id="createButton" layoutX="842.0" layoutY="63.0" mnemonicParsing="false" onAction="#createButton" prefHeight="35.0" prefWidth="67.0" text="Create" />
+      <Button fx:id="deleteAbut" layoutX="797.0" layoutY="311.0" mnemonicParsing="false" onAction="#deleteAbut" prefHeight="35.0" prefWidth="67.0" text="Delete" />
+      <Label layoutX="38.0" layoutY="346.0" text="First argument:" />
+      <TextField fx:id="editFirst" layoutX="31.0" layoutY="378.0" prefHeight="35.0" prefWidth="177.0" />
+      <Label layoutX="242.0" layoutY="346.0" text="Second argument:" />
+      <TextField fx:id="editSecond" layoutX="242.0" layoutY="378.0" prefHeight="35.0" prefWidth="177.0" />
+      <Label layoutX="437.0" layoutY="346.0" text="Third argument:" />
+      <TextField fx:id="editThird" layoutX="434.0" layoutY="378.0" prefHeight="35.0" prefWidth="177.0" />
+      <Button fx:id="editButton" layoutX="648.0" layoutY="378.0" mnemonicParsing="false" onAction="#editButton" prefHeight="35.0" prefWidth="46.0" text="Edit" />
+   </children>
+</AnchorPane>
